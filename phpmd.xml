@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset name="Symfony Project Ruleset"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0
+    http://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+    >
+<description>
+    PHP Mess Detector configuration for Symfony projects.
+</description>
+
+<!-- Exclude vendor and var directories -->
+<exclude-pattern>vendor/*</exclude-pattern>
+<exclude-pattern>var/*</exclude-pattern>
+<exclude-pattern>public/*</exclude-pattern>
+<exclude-pattern>config/*</exclude-pattern>
+<exclude-pattern>tests/bootstrap.php</exclude-pattern>
+
+<!-- Include recommended rulesets -->
+<rule ref="rulesets/codesize.xml"/>
+<rule ref="rulesets/cleancode.xml"/>
+<rule ref="rulesets/controversial.xml"/>
+<rule ref="rulesets/design.xml"/>
+<rule ref="rulesets/naming.xml"/>
+<rule ref="rulesets/unusedcode.xml"/>
+<rule ref="rulesets/symfony.xml"/>
+
+<!-- Example: customize rules (optional) -->
+<!--
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+    <properties>
+    <property name="maximum" value="10"/>
+    </properties>
+    </rule>
+-->
+</ruleset>
